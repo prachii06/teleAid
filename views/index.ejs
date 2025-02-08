@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="<%= lang %>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= __("title") %></title>
+    <script defer src="/script.js"></script>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        button { background-color: #007bff; color: white; padding: 10px 15px; border-radius: 8px; cursor: pointer; margin: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: red;">🚑 <%= __("title") %></h1>
+
+    <button id="getLocation">📍 <%= __("find_nearby") %></button>
+    <p id="locationText"></p>
+
+    <button id="sendAlert">🚨 <%= __("send_alert") %></button>
+
+    <!-- Language switch button -->
+    <a href="/change-lang/<%= lang === 'en' ? 'hi' : 'en' %>">
+        <button><%= __("change_lang") %></button>
+    </a>
+
+</body>
+</html>
