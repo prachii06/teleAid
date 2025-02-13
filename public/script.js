@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             locationText.innerHTML = `Latitude: ${latitude}, Longitude: ${longitude}`;
   
             // Open MapmyIndia link directly
-            const mapLink = `https://maps.mapmyindia.com/hospitals/near/${latitude},${longitude}`;
+            const mapLink = `https://maps.mapmyindia.com/hospitals/near-me`;
             window.open(mapLink, "_blank");
           },
           () => alert("Failed to get location.")
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Please get your location first!");
         return;
       }
-  
+
       try {
         const phoneNumber = prompt("Enter Emergency Contact Number:");
         if (!phoneNumber) return;
